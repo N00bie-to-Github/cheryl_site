@@ -1,9 +1,12 @@
 
 .navbar, .btn-secondary {
     /*background-color: #E03690;*/
-    background-color: #d43790;
+    background-color: #e4cad9;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: #d43790;
+}
 .btn-secondary {
     border-color: #922265;
 }

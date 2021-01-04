@@ -60,10 +60,10 @@
                             <a class="nav-link" href="./portfolio">Portfolio</a>
                         </li>
                     </ul>
-<!--                    <form class="form-inline mt-2 mt-md-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>-->
+                    <!--                    <form class="form-inline mt-2 mt-md-0">
+                                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        </form>-->
                 </div>
             </nav>
         </header>
@@ -134,19 +134,19 @@
                         <img src="./img/services.jpg" alt="services"/>
                         <h2>Services</h2>
                         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details Â»</a></p>
+                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details »</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
                         <img src="./img/about.jpg" alt="about us"/>
                         <h2>About Us</h2>
                         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details Â»</a></p>
+                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details »</a></p>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
                         <img src="./img/portfolio.jpg" alt="portfolio"/>
                         <h2>Portfolio</h2>
                         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details Â»</a></p>
+                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details »</a></p>
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
 
@@ -157,7 +157,7 @@
 
                 <div class="row featurette">
                     <div class="col-md-7">
-                        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">Itâ€™ll blow your mind.</span></h2>
+                        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                     </div>
                     <div class="col-md-5">
@@ -169,7 +169,7 @@
 
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
-                        <h2 class="featurette-heading">Oh yeah, itâ€™s that good. <span class="text-muted">See for yourself.</span></h2>
+                        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                     </div>
                     <div class="col-md-5 order-md-1">
@@ -199,7 +199,7 @@
             <!-- FOOTER -->
             <footer class="container">
                 <p class="float-right"><a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Back to top</a></p>
-                <p>Â© 2017-2019 Company, Inc. Â· <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Privacy</a> Â· <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Terms</a></p>
+                <p>© 2017-2019 Company, Inc. · <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Privacy</a> · <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Terms</a></p>
             </footer>
         </main>
         <script src="./js/jquery-3.5.1.min.js"></script>
@@ -207,4 +207,5 @@
         </script>-->
         <script src="./js/bootstrap.bundle.min.js"></script>
 
-    </body></html>
+    </body>
+</html>
