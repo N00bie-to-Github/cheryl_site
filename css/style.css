@@ -121,7 +121,9 @@ footer a, footer a:visited {
 /*========== Photo Gallery =========*/
 .photo-gallery {
     color:#313437;
-    background-color:#fff;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10%;
+    padding-bottom: 100px;
 }
 
 .photo-gallery p {
