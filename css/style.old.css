@@ -1,0 +1,31 @@
+
+.navbar, .btn-secondary {
+    /*background-color: #E03690;*/
+    background-color: #e4cad9;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #d43790;
+}
+.btn-secondary {
+    border-color: #922265;
+}
+
+.btn-primary {
+    background-color: #831E74;
+    border-color: #5F1E82;
+}
+.btn-primary:hover {
+    background-color: #F71591;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 1000px !important;
+  max-width: none;
+}
+.carousel-item {
+    height: 40rem;
+}

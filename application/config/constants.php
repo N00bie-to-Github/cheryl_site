@@ -83,3 +83,9 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/**
+ * User defined constants
+ */
+defined('SITE_TITLE')          OR define('SITE_TITLE', 'Precious Memories & Events'); // the title of the site
+defined('ADMIN_EMAIL')         OR define('ADMIN_EMAIL', ['martin.r.donk@gmail.com']); // the persons emailed when as contacts

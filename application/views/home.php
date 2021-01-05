@@ -1,211 +1,116 @@
-<!DOCTYPE html>
-<!-- saved from url=(0052)https://getbootstrap.com/docs/4.3/examples/carousel/ -->
-<html lang="en"><link type="text/css" id="dark-mode" rel="stylesheet" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Jekyll v3.8.5">
-        <title>Precious Memories & Events</title>
+        <meta name="author" content="Martin Donk">
+        <link rel="icon" href="img/favicon.ico">
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+        <title><?php echo SITE_TITLE; ?></title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
         <!-- Bootstrap core CSS -->
-        <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-        <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
         <!-- Custom styles for this template -->
-        <link href="./css/carousel.css" rel="stylesheet">
-        <link href="./css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- The script font for the nav bar -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
     </head>
+
     <body>
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-                <a class="navbar-brand" href="https://getbootstrap.com/docs/4.3/examples/carousel/#">
-                    <img src="./img/logo.png" alt="Precious Memories and Events"/>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container text-center">
+            <img src="img/logos/logo-large.png" alt="<?php echo SITE_TITLE; ?>" style="margin-top: 20px;" class="hidden-sm-down"/>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-light bg-transparent">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link disabled" href="./">Home <span class="sr-only">(current)</span></a>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item text-center">
+                            <a class="nav-link disabled" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./gallery">Gallery</a>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="/about">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about">About Us</a>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="/images">Gallery</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./portfolio">Portfolio</a>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="/contact">Contact Us</a>
                         </li>
+                        <!--
+                        <li class="nav-item dropdown text-center">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        -->
                     </ul>
-                    <!--                    <form class="form-inline mt-2 mt-md-0">
+                    <!--                    <form class="form-inline my-2 my-lg-0">
                                             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                         </form>-->
                 </div>
-            </nav>
-        </header>
-
-        <main role="main">
-
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-<!--                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>-->
-                        <img src="./img/3.jpg" alt="1"/>
-                        <div class="container">
-                            <div class="carousel-caption text-left">
-                                <h1>Parties.</h1>
-                                <p>We can make your party come to life and be as memorable as can be.</p>
-                                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">Sign up today</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/2.jpg" alt="1"/>
-                        <!--<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>-->
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <h1>Weddings.</h1>
-                                <p>A wedding is a milestone occasion in your life and the utmost care should be taken that everything goes as planned.</p>
-                                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">Learn more</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/4.jpg" style="width: 100%; height: 100%" alt="1"/>
-                        <!--<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>-->
-                        <div class="container">
-                            <div class="carousel-caption text-right">
-                                <h1>Special Occasions.</h1>
-                                <p>Whatever the occasion, our attention to detail and creativity can bring your ideas to life.</p>
-                                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">Browse gallery</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
 
+        </nav>
 
-            <!-- Marketing messaging and featurettes
-            ================================================== -->
-            <!-- Wrap the rest of the page in another container to center all the content. -->
+        <main role="main" class="container text-center">
+            <div class="curly-border hidden-sm-down">
+                <img src="img/clipart/curly_border.png"/>
+            </div>
 
-            <div class="container marketing">
-
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="./img/services.jpg" alt="services"/>
-                        <h2>Services</h2>
-                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details �</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="./img/about.jpg" alt="about us"/>
-                        <h2>About Us</h2>
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details �</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="./img/portfolio.jpg" alt="portfolio"/>
-                        <h2>Portfolio</h2>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.3/examples/carousel/#" role="button">View details �</a></p>
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
+            <div class="main">
+                <div id="intro">
+                    <h1>Precious Memories and Events, Inc.</h1>
+                    <p>
+                        With our incredibly high standards and creativity, Precious Memories and Events Inc. will exceed your expectations and create the most memorable experience for your event. We will translate your goals and objectives into a stunning and one of a kind soiree. We work with our clients as a partner to create a unique event that will meet their expectations.
+                        Precious Memories and Events Inc. offers a wide variety of event planning services, and we are dedicated to providing our clients with a seamless and enjoyable experience from start to finish. Our event planning services are available to all clients needing guidance throughout their event planning process. Whether you are planning a small family gathering, a baby shower, or a more elaborate event, Precious Memories and Events Inc. will work with you to create a unique, personalized, and stylish affair.
+                        We look forward to learning more about you and your vision for your next event!
+                    </p>
 
 
-                <!-- START THE FEATURETTES -->
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It뭠l blow your mind.</span></h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                </div>
+                <div id="carousel" class="carousel slide shadow-carousel" data-ride="carousel" style="background: black; height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/slideshow/A.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/slideshow/B.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/slideshow/C.jpg" alt="Third slide">
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7 order-md-2">
-                        <h2 class="featurette-heading">Oh yeah, it뭩 that good. <span class="text-muted">See for yourself.</span></h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5 order-md-1">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-                    </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5">
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-                    </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <!-- /END THE FEATURETTES -->
-
-            </div><!-- /.container -->
-
-
-            <!-- FOOTER -->
-            <footer class="container">
-                <p class="float-right"><a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Back to top</a></p>
-                <p>� 2017-2019 Company, Inc. � <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Privacy</a> � <a href="https://getbootstrap.com/docs/4.3/examples/carousel/#">Terms</a></p>
-            </footer>
-        </main>
-        <script src="./js/jquery-3.5.1.min.js"></script>
-<!--        <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-        </script>-->
-        <script src="./js/bootstrap.bundle.min.js"></script>
-
+        </main><!-- /.container -->
+        <footer class="footer text-center">
+            <div class="container">
+                <span class="text-muted">&copy Copyright <a href="http://preciousmemoriesandevents.com/"><?php echo SITE_TITLE; ?></a> | All rights reserved</span>
+            </div>
+        </footer>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/vendor/popper.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

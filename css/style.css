@@ -1,31 +1,169 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 4, 2021, 10:22:52 AM
+    Author     : Martin
+*/
 
-.navbar, .btn-secondary {
-    /*background-color: #E03690;*/
-    background-color: #e4cad9;
+body {
+    background: url('/img/patterns/dust_scratches.png');
+    color: #000;
+    font-weight: 500;
+    font-size: 1.2em;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #d43790;
-}
-.btn-secondary {
-    border-color: #922265;
+/* Center the nav bar */
+@media (max-width: 767.98px) {
+    .nav-item {
+        text-align: left !important;
+    }
 }
 
-.btn-primary {
-    background-color: #831E74;
-    border-color: #5F1E82;
+/*=============== Polyfill Bootstrap v3 ===============*/
+/* Breakpoint XS */
+@media (max-width: 575px)
+{
+    .hidden-xs-down, .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, 
+    .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    }
+
 }
-.btn-primary:hover {
-    background-color: #F71591;
+
+/* Breakpoint SM */
+@media (min-width: 576px) and (max-width: 767px)
+{
+    .hidden-sm-down, .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, 
+    .hidden-unless-xs, .hidden-unless-md, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
 }
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 1000px !important;
-  max-width: none;
+
+/* Breakpoint MD */
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .hidden-md-down, .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-lg, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
 }
-.carousel-item {
-    height: 40rem;
+
+/* Breakpoint LG */
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .hidden-lg-down, .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-xl
+    {
+        display: none !important;
+    } 
+}
+
+/* Breakpoint XL */
+@media (min-width: 1200px)
+{
+    .hidden-xl-down, 
+    .hidden-xs-up, .hidden-sm-up, .hidden-md-up, .hidden-lg-up, .hidden-xl-up, 
+    .hidden-unless-xs, .hidden-unless-sm, .hidden-unless-md, .hidden-unless-lg
+    {
+        display: none !important;
+    } 
+}
+
+/*=========== Google fonts ================*/
+.navbar {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+.nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.curly-border {
+    margin-bottom: 20px;
+}
+
+.main {
+    font-family: 'Raleway', sans-serif;
+}
+
+.shadow-carousel {
+    box-shadow: 10px 10px 20px #696969;
+}
+
+#intro {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+footer a, footer a:visited {
+    color: #c9171c
+}
+.bio-description {
+    margin-top: 50px;
+}
+
+/*========== Photo Gallery =========*/
+.photo-gallery {
+    color:#313437;
+    background-color:#fff;
+}
+
+.photo-gallery p {
+    color:#7d8285;
+}
+
+.photo-gallery h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+}
+
+@media (max-width:767px) {
+    .photo-gallery h2 {
+        margin-bottom:25px;
+        padding-top:25px;
+        font-size:24px;
+    }
+}
+
+.photo-gallery .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto 40px;
+}
+
+.photo-gallery .intro p {
+    margin-bottom:0;
+}
+
+.photo-gallery .photos {
+    padding-bottom:20px;
+}
+
+.photo-gallery .item {
+    padding-bottom:30px;
+}
+
+#message {
+    min-height: 400px;
+}
+.field-error {
+    color: red;
 }
