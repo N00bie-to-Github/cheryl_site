@@ -71,15 +71,15 @@
                     </div>
                     <div class="row photos">
                         <?php
-                            $images = array_filter(scandir('img/gallery'), function($item) {
-                                if($item === '.' || $item === '..') {
-                                    return false;
-                                }
-                                return !is_dir('img/gallery' . $item);
-                            });
+                        $images = array_filter(scandir('img/gallery'), function($item) {
+                            if ($item === '.' || $item === '..') {
+                                return false;
+                            }
+                            return !is_dir('img/gallery' . $item);
+                        });
                         ?>
-                        <?php foreach($images as $image): ?>
-                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="img/gallery/<?php echo $image;?>" data-lightbox="photos"><img class="img-fluid" src="img/gallery/<?php echo $image;?>"></a></div>
+                        <?php foreach ($images as $image): ?>
+                            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="img/gallery/<?php echo $image; ?>" data-lightbox="photos"><img class="img-fluid" src="img/gallery/<?php echo $image; ?>"></a></div>
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -99,5 +99,13 @@
         <script src="js/bootstrap.bundle.min.js"></script>
         <!-- Lightbox -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script>
+            // jQuery
+//            $('.grid').masonry({
+//                columnWidth: 200,
+//                itemSelector: '.item'
+//            });
+        </script>
     </body>
 </html>

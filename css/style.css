@@ -158,9 +158,13 @@ footer a, footer a:visited {
 }
 
 .photo-gallery .item {
-    padding-bottom:30px;
+    /*padding-bottom:30px;*/
 }
-
+.item {
+    max-height: 200px;
+    /*margin-bottom: 20px;*/
+    overflow: hidden;
+}
 #message {
     min-height: 400px;
 }

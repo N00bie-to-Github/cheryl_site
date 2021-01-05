@@ -41,13 +41,13 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link disabled" href="about">About Us  <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="about">About Us</a>
                         </li>
                         <li class="nav-item text-center">
                             <a class="nav-link" href="/images">Gallery</a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link" href="/contact">Contact Us</a>
+                            <a class="nav-link disabled" href="/contact">Contact Us  <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>
