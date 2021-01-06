@@ -85,7 +85,7 @@
 
 
                 </div>
-                <div id="carousel" class="carousel slide shadow-carousel" data-ride="carousel" style="background: black; height: 500px;">
+                <div id="carousel" class="carousel slide shadow-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="img/slideshow/A.jpg" alt="First slide">

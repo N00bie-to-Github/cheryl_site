@@ -35,8 +35,11 @@ class Contact extends CI_Controller {
                     'message' => $formData['message']
                 );
                 
-                // Send an email to the site admin
-                $send = $this->sendEmail($mailData);
+                
+                // Send an email to the site admins
+                foreach (ADMIN_EMAILS as $to) {
+                    $send = $this->sendEmail($mailData, $to, 'request@preciouosmemoriesandevents.com');
+                }
                 
                 // Check email sending status
                 if($send){
@@ -63,13 +66,11 @@ class Contact extends CI_Controller {
         $this->load->view('contact', $data);
     }
     
-    private function sendEmail($mailData){
+    private function sendEmail($mailData, $to, $from){
         // Load the email library
         $this->load->library('email');
         
         // Mail config
-        $to = 'martin.r.donk@gmail.com';
-        $from = 'preciousmemoriesandevents@gmail.com';
         $fromName = 'Precious Memories';
         $mailSubject = 'Contact Request Submitted by '.$mailData['name'];
         

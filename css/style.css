@@ -14,7 +14,10 @@ body {
     font-weight: 500;
     font-size: 1.2em;
 }
-
+#carousel {
+    background: #ccc;
+    height: 45%;
+}
 /* Center the nav bar */
 @media (max-width: 767.98px) {
     .nav-item {
