@@ -88,4 +88,10 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
  * User defined constants
  */
 defined('SITE_TITLE')          OR define('SITE_TITLE', 'Precious Memories & Events'); // the title of the site
-defined('ADMIN_EMAILS')         OR define('ADMIN_EMAILS', ['martin.r.donk@gmail.com']); // the persons emailed when as contacts
+defined('ADMIN_EMAILS')        OR define('ADMIN_EMAILS', 
+        [
+            'martin.r.donk@gmail.com', 
+            'preciousmemoriesandevents@gmail.com', 
+            'cheryl@preciousmemoriesandevents.com', 
+            'alexis@preciousmemoriesandevents.com'
+        ]); // the persons emailed when as contacts
