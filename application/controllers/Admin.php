@@ -60,24 +60,42 @@ class Admin extends CI_Controller {
     
     public function home() {
         $this->load->model('admin_model');
+        $this->load->helper('admin_helper');
         
         // Get the type of form that it is
         $form = $this->input->post('form');
         $messages = [];
         
         if($form === 'keywords') {
-            $keywords = $s2 = preg_replace('/\s+/', ', ', preg_replace('/,/', ' ', $this->input->post('keywords')));
-            $unique_keywords = array_unique(explode(',', $keywords));
-            $this->admin_model->update_keywords(join(',', $unique_keywords));
-            array_push($messages, 'Keyword\'s Updated!');
+            $keywords = $this->input->post('keywords');
+            $unique_keywords = uniqueCommaList($keywords);
+            $this->admin_model->update_keyword_list($unique_keywords);
+            array_push($messages, 'Keyword List Updated!');
+        }
+        elseif($form === 'contacts') {
+            $contacts = $this->input->post('contacts');
+            $unique_contacts = uniqueCommaList($contacts);
+            $this->admin_model->update_contacts_list($unique_contacts);
+            array_push($messages, 'Contact List Updated!');
+        }
+        else if($form === 'config') {
+            $data = [
+                'site_title' => $this->input->post('site_title')
+            ];
+            $this->admin_model->update_site_config($data);
+            array_push($messages, 'Site Configuration Updated!');
         }
 
-        $keywords = $this->admin_model->get_keywords('main');
+        $keyword_list = $this->admin_model->get_keyword_list('main');
+        $contact_list = $this->admin_model->get_contact_list('main');
+        $site_config = $this->admin_model->get_config('main');
         
         $this->load->view('admin/base', [
             'heading' => 'Home',
             'content' => $this->load->view('admin/home', [
-                'keywords' => $keywords
+                'keyword_list' => $keyword_list,
+                'contact_list' => $contact_list,
+                'site_config' => $site_config,
             ], True),
             'messages' => $messages
         ]);

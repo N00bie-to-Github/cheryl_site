@@ -10,7 +10,7 @@ if (!isset($heading)) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="Martin Donk">
-        <link rel="icon" href="img/favicon.ico">
+        <link rel="icon" href="/img/favicon.ico">
 
         <title><?php echo SITE_TITLE; ?> | Admin - Home</title>
 
@@ -33,16 +33,18 @@ if (!isset($heading)) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
         <script>
-<?php foreach ($messages as $m): ?>
-                var messages = [
+            var messages = [
+            <?php foreach ($messages as $m): ?>
+                
                     '<?php echo preg_replace("/'/", "\'", $m); ?>',
-                ]
-<?php endforeach; ?>
+                
+            <?php endforeach; ?>
+            ]
         </script>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html" style="color: #FFCECE;">PM&E Admin</a>
+            <a class="navbar-brand" href="index.html" style="color: #FFCECE;"><img src="/img/logos/logo-ladies-white-sm.png" alt="logo" class=""/>Site Admin</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -54,10 +56,10 @@ if (!isset($heading)) {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">Settings</a>
+<!--                        <a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <div class="dropdown-divider"></div>-->
+                        <a class="dropdown-item" href="/admin/logout">Logout</a>
                     </div>
                 </li>
             </ul>
