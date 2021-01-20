@@ -174,3 +174,8 @@ footer a, footer a:visited {
 .field-error {
     color: red;
 }
+
+.huge {
+    font-size: 9em;
+    font-weight: bold;
+}

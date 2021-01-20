@@ -66,6 +66,34 @@ class Contact extends CI_Controller {
         $this->load->view('contact', $data);
     }
     
+    public function test($key="") {
+        if($key === 'tanden11') {
+            try {
+                // Define email data
+                    $mailData = array(
+                        'name' => "Precious Memories & Events",
+                        'email' => "example@preciousmemoriesandevents.com",
+                        'subject' => "Test",
+                        'message' => "This is a test of the email and notification system."
+                    );
+
+
+                    // Send an email to the site admins
+                    foreach (ADMIN_EMAILS as $to) {
+                        echo "Sending mail to ".$to."<br/>";
+                        $send = $this->sendEmail($mailData, $to, 'request@preciousmemoriesandevents.com');
+                    }
+                    echo "Done";
+            } 
+            catch (Exception $ex) {
+                echo "No worky bro";
+            }
+        }
+        else {
+            echo 'Hi there';
+        }
+    }
+    
     private function sendEmail($mailData, $to, $from){
         // Load the email library
         $this->load->library('email');

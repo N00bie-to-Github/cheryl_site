@@ -1,64 +1,59 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>404 Page Not Found</title>
-<style type="text/css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Martin Donk">
+        <link rel="icon" href="img/favicon.ico">
 
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
+        <title><?php echo SITE_TITLE; ?></title>
 
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
-}
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
-}
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
-}
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
+        <!-- The script font for the nav bar -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
+    </head>
 
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
-</head>
-<body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
-</body>
+    <body>
+        <div class="container text-center">
+            <img src="img/logos/logo-large.png" alt="<?php echo SITE_TITLE; ?>" style="margin-top: 20px;" class="hidden-sm-down"/>
+        </div>
+
+        <main role="main" class="container text-center">
+            <div class="curly-border hidden-sm-down">
+                <img src="img/clipart/curly_border.png"/>
+            </div>
+
+            <div class="main">
+                <div class="huge">404</div>
+                <div class="text-center">
+                    <h1>PAGE NOT FOUND</h1>
+                </div>
+            </div>
+
+        </main><!-- /.container -->
+        <footer class="footer text-center">
+            <div class="container">
+                <span class="text-muted">&copy Copyright <a href="http://preciousmemoriesandevents.com/"><?php echo SITE_TITLE; ?></a> | All rights reserved</span>
+            </div>
+        </footer>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/vendor/popper.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
