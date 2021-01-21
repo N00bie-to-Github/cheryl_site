@@ -3,7 +3,7 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Navigation</div>
-                <a class="nav-link <?php if (strtolower($heading) === 'home'): ?>active<?php endif; ?>" href="/admin">
+                <a class="nav-link" href="/admin/home">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
@@ -13,7 +13,7 @@
                 </a>
 
                 <div class="sb-sidenav-menu-heading">Management</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="/admin/users">
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Users
                 </a>
@@ -28,8 +28,8 @@
                 </a>
                 <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="401.html">Home</a>
-                        <a class="nav-link" href="404.html">About Us</a>
+                        <a class="nav-link" href="/admin/pages/home">Home</a>
+                        <a class="nav-link" href="/admin/pages/about">About Us</a>
                     </nav>
                 </div>
             </div>

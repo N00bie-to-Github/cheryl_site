@@ -32,14 +32,25 @@ if (!isset($heading)) {
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+        
+        <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        
         <script>
+            <?php $messages = $_SESSION['messages']; ?>
             var messages = [
             <?php foreach ($messages as $m): ?>
                 
                     '<?php echo preg_replace("/'/", "\'", $m); ?>',
                 
             <?php endforeach; ?>
-            ]
+            ];
+            // Called when at the end of scripts
+            var scripts = [];
+            <?php
+                // Clear the messages
+                $_SESSION['messages'] = [];
+            ?>
         </script>
     </head>
     <body class="sb-nav-fixed">
@@ -106,6 +117,14 @@ if (!isset($heading)) {
                     message: message,
                     position: 'topCenter'
                 });
+            });
+        </script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+        <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+        <script>
+            scripts.forEach(function(f) {
+               f.call(); 
             });
         </script>
     </body>

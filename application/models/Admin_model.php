@@ -13,34 +13,70 @@ class Admin_model extends CI_model {
         $result = $q->result_array();
         return $result[0];
     }
-    
+
     public function get_contact_list($name = 'main') {
         $q = $this->db->get_where('contact_lists', ['name' => $name]);
         $result = $q->result_array();
         return $result[0];
     }
-    
+
     public function get_config($name = 'main') {
         $q = $this->db->get_where('site_configs', ['name' => $name]);
         $result = $q->result_array();
         return $result[0];
     }
 
-    public function update_keyword_list($keywords, $name='main') {
+    public function update_keyword_list($keywords, $name = 'main') {
         $this->db->set('contents', $keywords);
         $this->db->where('name', $name);
-        $this->db->update('keywords'); 
+        $this->db->update('keywords');
     }
-    
-    public function update_contacts_list($contact_list, $name='main') {
+
+    public function update_contacts_list($contact_list, $name = 'main') {
         $this->db->set('contents', $contact_list);
         $this->db->where('name', $name);
-        $this->db->update('contact_lists'); 
+        $this->db->update('contact_lists');
     }
-    
-    public function update_site_config($data, $name='main') {
+
+    public function update_site_config($data, $name = 'main') {
         $this->db->where('name', $name);
-        $this->db->update('site_configs', $data); 
+        $this->db->update('site_configs', $data);
+    }
+
+    public function get_users() {
+        $q = $this->db->get('users');
+        return $q->result_array();
+    }
+
+    public function get_user_by_id($id) {
+        $q = $this->db->get_where('users', ['id' => $id]);
+        $result = $q->result_array();
+        return $result[0];
+    }
+
+    public function update_pw($id, $password) {
+        $this->db->set('password', $password);
+        $this->db->where('id', $id);
+        $this->db->update('users');
+    }
+
+    public function add_user($data) {
+        $this->db->insert('users', $data);
+    }
+
+    public function delete_user_by_id($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('users');
     }
     
+    public function get_page($page_name) {
+        $q = $this->db->get_where('pages', ['name' => $page_name]);
+        $result = $q->result_array();
+        return $result[0];
+    }
+    
+    public function update_page($page_name, $data) {
+        $this->db->where('name', $page_name);
+        $this->db->update('pages', $data);
+    }
 }
