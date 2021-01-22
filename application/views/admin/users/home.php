@@ -3,7 +3,7 @@
         <a href="/admin/users/add" class="btn btn-success">Add User</a>
     </div>
     
-    <table id="user-table" class="w-100">
+    <table id="user-table" class="table table-striped">
         <thead>
             <tr>
                 <th>Username</th>
@@ -16,7 +16,7 @@
             <tr>
                 <td><?php echo $user['username']; ?></td>
                 <td><a class="btn btn-primary btn-sm" href="/admin/users/changepw/<?php echo $user['id']; ?>">Change password</a></td>
-                <td><a class="btn btn-danger btn-sm" href="/admin/users/delete/<?php echo $user['id']; ?>">Delete user</a></td>
+                <td><a class="btn btn-danger btn-sm delete" href="/admin/users/delete/<?php echo $user['id']; ?>">Delete user</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -28,6 +28,12 @@
         $(document).ready(function () {
             $('#user-table').DataTable({
                 "autoWidth": false
+            });
+            
+            $('.delete').click(function(e) {
+                if(!confirm("You're about to delete a user. Are you sure?")) {
+                    e.preventDefault();
+                }
             });
         });
     });

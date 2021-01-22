@@ -12,7 +12,7 @@
             <div class="card-footer">
                 <button type="submit" class="btn btn-secondary btn-sm">Update</button>
             </div>
-            <input type="hidden" name="form" value="keywords"/>
+            <input type="hidden" name="route" value="keywords"/>
         </form>
     </div>
 
@@ -29,7 +29,7 @@
             <div class="card-footer">
                 <button type="submit" class="btn btn-secondary btn-sm">Update</button>
             </div>
-            <input type="hidden" name="form" value="contacts"/>
+            <input type="hidden" name="route" value="contacts"/>
         </form>
     </div>
 
@@ -46,7 +46,7 @@
             <div class="card-footer">
                 <button type="submit" class="btn btn-secondary btn-sm">Update</button>
             </div>
-            <input type="hidden" name="form" value="config"/>
+            <input type="hidden" name="route" value="config"/>
         </form>
     </div>
 </div>

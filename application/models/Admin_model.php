@@ -68,15 +68,41 @@ class Admin_model extends CI_model {
         $this->db->where('id', $id);
         $this->db->delete('users');
     }
-    
+
     public function get_page($page_name) {
         $q = $this->db->get_where('pages', ['name' => $page_name]);
         $result = $q->result_array();
         return $result[0];
     }
-    
+
     public function update_page($page_name, $data) {
         $this->db->where('name', $page_name);
         $this->db->update('pages', $data);
     }
+
+    public function get_images() {
+        $q = $this->db->get('images');
+        return $q->result_array();
+    }
+
+    public function add_image($data) {
+        $this->db->insert('images', $data);
+    }
+
+    public function get_image_by_id($id) {
+        $q = $this->db->get_where('images', ['id' => $id]);
+        $result = $q->result_array();
+        return $result[0];
+    }
+
+    public function delete_image($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('images');
+    }
+
+    public function update_image($id, $data) {
+        $this->db->where('id', $id);
+        $this->db->update('images', $data);
+    }
+
 }

@@ -17,7 +17,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                     Users
                 </a>
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="/admin/images">
                     <div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
                     Images
                 </a>

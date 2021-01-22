@@ -37,3 +37,6 @@ body {
 .nav-link:hover {
     background: #a80004;
 }
+.admin-image-thumb {
+    max-height: 60px;
+}
