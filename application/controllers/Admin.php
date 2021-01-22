@@ -4,12 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
     
-    public $image_dir = '/images/';
+    public $image_dir = '/uploads/';
     
     function __construct() {
         parent::__construct();
         
-        $this->load->database();
         $this->load->helper('url');
 
         $this->load->library('session');
