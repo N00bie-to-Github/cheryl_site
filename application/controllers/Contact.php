@@ -42,7 +42,7 @@ class Contact extends CI_Controller {
                 $emails = explode(',', $contact_list['contents']);
                 // Send an email to the site admins
                 foreach($emails as $to) {
-                    $send = $this->sendEmail($mailData, $to, 'request@preciouosmemoriesandevents.com');
+                    $send = $this->sendEmail($mailData, $to, $contact_list['send_from']);
                 }
 
                 // Check email sending status
