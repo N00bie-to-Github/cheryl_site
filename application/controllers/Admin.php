@@ -111,6 +111,7 @@ class Admin extends CI_Controller {
 
     public function users($route = '', $id = NULL) {
         $users = $this->admin_model->get_users();
+        $username = '';
 
         if($route === 'changepw') {
             $error = '';
@@ -149,21 +150,34 @@ class Admin extends CI_Controller {
                     $error = 'The passwords do not match';
                 }
                 else {
-                    $password = hash('sha256', $pw1);
-                    $this->admin_model->add_user([
-                        'username' => $username,
-                        'password' => $password
-                    ]);
-                    $this->_notify('User Added');
-                    redirect('/admin/users/home');
+                    echo $pw1;
+                    $is_long_enough = strlen($pw1) > 7;
+                    $has_number = [];
+                    preg_match("/\d/", $pw1, $has_number);
+                    $has_special = preg_match("/[~!@#$%^&*?+-]/", $pw1);
+                    $has_upper = preg_match("/[A-Z]/", $pw1);
+                    
+                    if($is_long_enough && $has_number && $has_special && $has_upper) {
+                        $password = hash('sha256', $pw1);
+                            $this->admin_model->add_user([
+                            'username' => $username,
+                            'password' => $password
+                        ]);
+                        $this->_notify('User Added');
+                        redirect('/admin/users/home');
+                    }
+                    else {
+                        $error = 'Password must be at least 8 characters, contain one uppercase number, contain a number, and one of these characters ~!@#$%^&*?+-.';
+                    }
                 }
             }
 
             $this->load->view('admin/base', [
                 'heading' => 'Users | New User',
                 'content' => $this->load->view('admin/users/adduser', [
-                    'error' => $error
-                        ], TRUE)
+                    'error' => $error,
+                    'username' => $username
+                ], TRUE)
             ]);
         }
         elseif($route === 'delete') {

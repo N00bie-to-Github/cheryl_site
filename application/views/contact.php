@@ -2,7 +2,7 @@
     <div class="content-frm">
         <!-- Display the status message -->
         <?php if(!empty($status)) { ?>
-            <div class="status <?php echo $status['type']; ?>"><?php echo $status['msg']; ?></div>
+            <div class="alert alert-<?php echo $status['type']; ?>"><?php echo $status['message']; ?></div>
         <?php } ?>
 
         <!-- Contact form -->

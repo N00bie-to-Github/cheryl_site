@@ -13,7 +13,9 @@ class Contact extends CI_Controller {
     }
 
     public function index() {
-        $data = $formData = array();
+        $data = [];
+        $formData = [];
+        $message = '';
 
         // If contact request is submitted
         if($this->input->post('contactSubmit')) {
@@ -42,24 +44,24 @@ class Contact extends CI_Controller {
                 $emails = explode(',', $contact_list['contents']);
                 // Send an email to the site admins
                 foreach($emails as $to) {
-                    $send = $this->sendEmail($mailData, $to, $contact_list['send_from']);
+                    $send = $this->sendEmail($mailData, $to, $contact_list['sent_from']);
                 }
 
                 // Check email sending status
                 if($send) {
                     // Unset form data
-                    $formData = array();
+                    $formData = [];
 
-                    $data['status'] = array(
+                    $data['status'] = [
                         'type' => 'success',
-                        'msg' => 'Your contact request has been submitted successfully.'
-                    );
+                        'message' => $contact_list['reply_message']
+                    ];
                 }
                 else {
-                    $data['status'] = array(
+                    $data['status'] = [
                         'type' => 'error',
-                        'msg' => 'Some problems occured, please try again.'
-                    );
+                        'message' => 'Some problems occured, please try again.'
+                    ];
                 }
             }
         }
@@ -70,9 +72,7 @@ class Contact extends CI_Controller {
         $this->load->view('base', [
             'page' => 'contact us',
             'config' => $this->site_model->get_config('main'),
-            'content' => $this->load->view('contact', [
-                'postData' => $formData
-                    ], TRUE)
+            'content' => $this->load->view('contact', $data, TRUE)
         ]);
     }
 
@@ -127,7 +127,7 @@ class Contact extends CI_Controller {
         $this->email->from($from, $fromName);
         $this->email->subject($mailSubject);
         $this->email->message($mailContent);
-
+        
         // Send email & return status
         return $this->email->send() ? true : false;
     }
