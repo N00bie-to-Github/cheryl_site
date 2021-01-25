@@ -32,10 +32,9 @@ class Admin_model extends CI_model {
         $this->db->update('keywords');
     }
 
-    public function update_contacts_list($contact_list, $name = 'main') {
-        $this->db->set('contents', $contact_list);
+    public function update_contacts_list($data, $name = 'main') {
         $this->db->where('name', $name);
-        $this->db->update('contact_lists');
+        $this->db->update('contact_lists', $data);
     }
 
     public function update_site_config($data, $name = 'main') {

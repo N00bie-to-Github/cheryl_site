@@ -19,11 +19,19 @@
     <!-- Notification List -->
     <div class="card mb-4">
         <form method="post" action="">
-            <div class="card-header">Contact Emails</div>
+            <div class="card-header">Site Contact Form Configuration</div>
             <div class="card-body">
                 <div id="notification-list">
-                    <textarea class="form-control admin-textarea" id="keywords-textarea" name="contacts" rows="4"><?php echo $contact_list['contents']; ?></textarea>
-                    <small id="passwordHelpBlock" class="form-text text-muted">Add email addressed of the individuals to be notified from the contact form on the site. Separate email addresses by commas.
+                    <div class="form-group">
+                        <label for="keywords-textarea">Site Title</label>
+                        <textarea class="form-control admin-textarea" id="keywords-textarea" name="contents" rows="2"><?php echo $contact_list['contents']; ?></textarea>
+                        <small id="keywords-help" class="form-text text-muted">Add email addressed of the individuals to be notified from the contact form on the site. Separate email addresses by commas.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="reply_message">Success Message</label>
+                        <textarea class="form-control admin-textarea" id="reply_message" name="reply_message" rows="2"><?php echo $contact_list['reply_message']; ?></textarea>
+                        <small id="reply-message-help" class="form-text text-muted">This message will be displayed once the contact form was submitted</small>
+                    </div>
                 </div>
             </div>
             <div class="card-footer">

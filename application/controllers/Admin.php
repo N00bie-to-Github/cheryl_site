@@ -82,9 +82,10 @@ class Admin extends CI_Controller {
             $this->_notify('Keyword List Updated!');
         }
         elseif($route === 'contacts') {
-            $contacts = $this->input->post('contacts');
-            $unique_contacts = uniqueCommaList($contacts);
-            $this->admin_model->update_contacts_list($unique_contacts);
+            $data = $this->input->post();
+            unset($data['route']);
+            $data['contents'] = uniqueCommaList($data['contents']);
+            $this->admin_model->update_contacts_list($data);
             $this->_notify('Contact List Updated!');
         }
         else if($route === 'config') {
