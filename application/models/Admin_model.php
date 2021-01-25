@@ -80,6 +80,7 @@ class Admin_model extends CI_model {
     }
 
     public function get_images() {
+        $this->db->order_by('sort_order', 'ASC');
         $q = $this->db->get('images');
         return $q->result_array();
     }

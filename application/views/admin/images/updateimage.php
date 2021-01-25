@@ -9,6 +9,10 @@
         <label for="description">Description</label>
         <textarea class="form-control" name="description" id="description" placeholder="Provide a short description for this image"><?php echo $image['description']; ?></textarea>
     </div>
+    <div class="form-group">
+        <label for="sort_order">Order</label>
+        <input class="form-control" type="number" step="1" name="sort_order" id="sort_order" placeholder="The order in which the image appears" value="<?php echo $image['sort_order']; ?>"/>
+    </div>
     <div class="error">
         <small class="danger"><?php echo (isset($error) ? $error : ''); ?></small>
     </div>

@@ -125,10 +125,21 @@ class Admin extends CI_Controller {
                     $error = 'The passwords do not match';
                 }
                 else {
-                    $password = hash('sha256', $pw1);
-                    $this->admin_model->update_pw($id, $password);
-                    $this->_notify('Password Updated');
-                    redirect('/admin/users');
+                    $is_long_enough = strlen($pw1) > 7;
+                    $has_number = [];
+                    preg_match("/\d/", $pw1, $has_number);
+                    $has_special = preg_match("/[~!@#$%^&*?+-]/", $pw1);
+                    $has_upper = preg_match("/[A-Z]/", $pw1);
+                    
+                    if($is_long_enough && $has_number && $has_special && $has_upper) {
+                        $password = hash('sha256', $pw1);
+                        $this->admin_model->update_pw($id, $password);
+                        $this->_notify('Password Updated');
+                        redirect('/admin/users');
+                    }
+                    else {
+                        $error = 'Password must be at least 8 characters, contain one uppercase number, contain a number, and one of these characters ~!@#$%^&*?+-.';
+                    }
                 }
             }
 
@@ -151,7 +162,6 @@ class Admin extends CI_Controller {
                     $error = 'The passwords do not match';
                 }
                 else {
-                    echo $pw1;
                     $is_long_enough = strlen($pw1) > 7;
                     $has_number = [];
                     preg_match("/\d/", $pw1, $has_number);
