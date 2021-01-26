@@ -1,6 +1,6 @@
 <div class="main">
     <div id="intro">
-        <h1>Precious Memories and Events, Inc.</h1>
+        <h1><?php echo $page['section2']; ?></h1>
         <div>
             <?php echo $page['section1'];?>
         </div>
